@@ -4,7 +4,7 @@ Congratulations! You've written your first API. Just like the API you consumed f
 
 ## Setup
 
-Just like your week 1 project, this will be a new Rails app. You should fork this repository. 
+Just like your week 1 project, this will be a new Rails app. You should NOT fork this repository. 
 
 ```sh
 git clone <Rails Engine FE SSH>
