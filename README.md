@@ -7,10 +7,10 @@ Congratulations! You've written your first API. Just like the API you consumed f
 Just like your week 1 project, this will be a new Rails app. You should fork this repository. 
 
 ```sh
-git clone <Rails Engine FE SSH>
+git clone <your forked copy of this repo>
 cd rails_engine_fe
 bundle
-bundle exec rake db:create
+bundle exec rails db:create
 ```
 
 In `/config/puma.rb`, you'll notice that the port has changed from 3000 to 5000. This should be on or around line 12.
