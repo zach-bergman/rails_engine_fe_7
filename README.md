@@ -2,6 +2,11 @@
 
 Congratulations! You've written your first API. Just like the API you consumed for your week 1 project, your Rails Engine API can be used by other projects now, too. For this challenge, you will create a front end application that will make calls to your backend application, the Rails Engine API you have just created.
 
+## Learning/Review Goals:
+* Practice TDD
+* Consume an API
+* Gain familiarity with service-oriented architecture
+
 ## Setup
 
 Just like your week 1 project, this will be a new Rails app. You should fork this repository. 
@@ -26,13 +31,11 @@ port        ENV.fetch("PORT") { 5000 }
 
 ## The Challenge
 
-### User Story - Merchants
+### 1. Merchants Index
 As a visitor, <br>
 When I visit '/merchants' <br>
 I should see a list of merchants by name <br>
-and when I click the merchant's name <br>
-I should be on page '/merchants/:id' <br>
-And I should see a list of items that merchant sells.
+and each merchant's name is a link to their show page (merchants/:id).
 
 <br>
 <br>
@@ -42,27 +45,46 @@ And I should see a list of items that merchant sells.
 <br>
 <br>
 
+
+### 2. Merchants Show
+When I visit the merchants index page (`/merchants`)<br>
+and I click a merchant's name <br>
+I should be on page `'/merchants/:id'` <br>
+And I should see that merchant's name
+and a list of items that merchant sells.
+
+<br>
+<br>
+
 ![Wireframe for /merchants show](/docs/rails_engine_challenge_merchants_show.png)
 
+<br>
+<br>
 
-
-## Extra Practice
-If you have time or want extra practice, complete this user story for Items
-
-### User Story - Items
+### 3. Items Index 
 As a visitor, <br>
 When I visit '/items' <br>
-I should see a list of items by name <br>
-and when I click the item's name <br>
-I should be on page '/items/:id' <br>
-And I should see the name of the item, description, and unit price.
+I should see a list of item names,<br>
+and each name is a link to that item's show page (`/items/:id`),<br>
+and when I click on that link, I am taken to that item's show page<br>
+where I see the name of the item, its description, and unit price.<br>
 
-## Extension Ideas
-* Create a search form on your root path to consume one of your part 2 endpoints to search for one merchant or all merchants by a name fragment
+<br>
+<br>
 
-![Wireframe for /merchants show](/docs/rails_engine_challenge_search.png)
+## Extra Practice
+If you have time or want extra practice, complete the following user stories that match the "Find One" and "Find All" endpoints of your backend project's "Section Two" requirements.
 
-## Learning/Review Goals:
-* Practice TDD
-* Consuming an API
-* Gain familiarity with service oriented architecture
+
+### 4. Find One
+As a visitor, <br>
+when I visit `/search`, <br>
+I see a form that allows me to search for a single Merchant (or a single Item) by its name.<br>
+
+
+### 5. Find All
+As a visitor<br>
+when I visit `/search`,<br>
+I see a form that allows me to search for all Merchants (or Items) by name, min_price, or max_price.
+
+![Wireframe for Search Page](/docs/rails_engine_challenge_search.png)
