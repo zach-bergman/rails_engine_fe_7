@@ -1,0 +1,9 @@
+<h1>Items:</h1>
+
+<div id="items">
+  <% @facade.items.each do |item| %>
+    <ul>
+      <li><%= link_to item.name, item_path(item.id), method: :get %></li>
+    </ul>
+  <% end %>
+</div>
